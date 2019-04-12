@@ -12,54 +12,58 @@
 <!-- Select Size Radio Button -->
       <h5>Select a size:</h5>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="size" value="small" checked>
+        <input class="form-check-input" type="radio" name="size" value="Small" checked>
         <label class="form-check-label">Small</label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="size" value="medium" checked>
+        <input class="form-check-input" type="radio" name="size" value="Medium" checked>
         <label class="form-check-label">Medium</label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="size" value="large" checked>
+        <input class="form-check-input" type="radio" name="size" value="Large" checked>
         <label class="form-check-label">Large</label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="size" value="extraLarge" checked>
+        <input class="form-check-input" type="radio" name="size" value="Extra Large" checked>
         <label class="form-check-label">Extra Large</label>
       </div>
       <br>
 <!-- Select Cheese Radio Buttons -->
       <h5>Select Cheeses:</h5>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="cheese" value="small" checked>
+        <input class="form-check-input" type="radio" name="cheese" value="No Cheese" checked>
         <label class="form-check-label">No Cheese</label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="cheese" value="medium" checked>
+        <input class="form-check-input" type="radio" name="cheese" value="Light Cheese" checked>
         <label class="form-check-label">Light Cheese</label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="cheese" value="large" checked>
+        <input class="form-check-input" type="radio" name="cheese" value="Regular Cheese" checked>
         <label class="form-check-label">Regular Cheese</label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="cheese" value="extraLarge" checked>
+        <input class="form-check-input" type="radio" name="cheese" value="Extra Cheese" checked>
         <label class="form-check-label">Extra Cheese</label>
       </div>
       <br>
 <!-- Select Toppings Check Boxes -->
       <h5>Select Toppings:</h5>
       <div class="form-group bad">
-        <input type="checkbox" name="toppings" value="mushrooms"> Mushrooms<br>
-        <input type="checkbox" name="toppings" value="tomatoes"> Tomatoes<br>
-        <input type="checkbox" name="toppings" value="pineapple"> Pineapple<br>
-        <input type="checkbox" name="toppings" value="onion"> Onion<br>
-        <input type="checkbox" name="toppings" value="olives"> Olives<br>
-        <input type="checkbox" name="toppings" value="greenPeppers"> Green Pepper<br>
-        <input type="checkbox" name="toppings" value="jalapeno"> Jalapeno<br>
-        <input type="checkbox" name="toppings" value="artichokeHearts"> Artichoke Hearts<br>
+        <input type="checkbox" name="toppings" value="Mushrooms"> Mushrooms<br>
+        <input type="checkbox" name="toppings" value="Tomatoes"> Tomatoes<br>
+        <input type="checkbox" name="toppings" value="Pineapple"> Pineapple<br>
+        <input type="checkbox" name="toppings" value="Onions"> Onion<br>
+        <input type="checkbox" name="toppings" value="Olives"> Olives<br>
+        <input type="checkbox" name="toppings" value="Green Peppers"> Green Pepper<br>
+        <input type="checkbox" name="toppings" value="Jalapeno Peppers"> Jalapeno Peppers<br>
+        <input type="checkbox" name="toppings" value="Artichoke Hearts"> Artichoke Hearts<br>
       </div>
       <button type="submit" class="btn-danger" id="addToCart">Add to Cart</button>
     </form>
+    <div class="pizzaOrder">
+      <h3>Your Order</h3>
+      <p>Your <span class="pizzaSize"></span> Pizza : $<span class="pizzaPrice"></span> </p>
+    </div>
   </body>
 </html>
