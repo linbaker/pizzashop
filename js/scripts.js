@@ -10,8 +10,32 @@ function Order() {
 function Pizza(size, cheese, toppings) {
   this.size = size,
   this.cheese = cheese,
-  this.toppings = toppings
+  this.toppings = toppings,
+  this.price = 6,
+  this.sumPrice();
 }
+
+//Price function
+Pizza.prototype.sumPrice = function() {
+  if (this.size === "Medium"){
+  this.price += 2;
+  } else if (this.size === "Large"){
+  this.price += 4;
+  } else if (this.size === "Extra Large"){
+    this.price += 6;
+  } else {}
+  
+  if (this.cheese === "No Cheese"){
+    this.price -= 1;
+  } else if (this.size === "Extra Cheese"){
+    this.price += 2;
+  } else {}
+
+  if (this.toppings.length >= 1) {
+    this.price += parseInt(this.toppings.length);
+  } else {}
+};
+
 
 //Push pizza object to order array
 Order.prototype.addPizza = function(pizza) {
@@ -31,7 +55,6 @@ $(function() {
       });
     var pizza = new Pizza(size, cheese, toppings);
     var order = new Order(pizza);
-    order.addPizza(pizza);
-    console.log(order);
+    console.log(pizza);
   });
 });
