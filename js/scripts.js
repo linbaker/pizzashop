@@ -24,7 +24,7 @@ Pizza.prototype.sumPrice = function() {
   } else if (this.size === "Extra Large"){
     this.price += 6;
   } else {}
-  
+
   if (this.cheese === "No Cheese"){
     this.price -= 1;
   } else if (this.size === "Extra Cheese"){
@@ -56,5 +56,7 @@ $(function() {
     var pizza = new Pizza(size, cheese, toppings);
     var order = new Order(pizza);
     console.log(pizza);
+    $(".pizzaSize").html(pizza.size);
+    $(".pizzaPrice").html(pizza.price);
   });
 });
