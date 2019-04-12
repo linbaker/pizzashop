@@ -8,7 +8,16 @@
     <title>Pizza Shop</title>
   </head>
   <body class="container">
+    <div class="jumbotron">
+      <h1>Lindsey's Pizza Place</h1>
+    </div>
     <form class="pizzaForm">
+      <div class="row pizzaOrder">
+        <div class="col-xs-12 col-md-6 col-lg-6">
+          <h3>Your Order</h3>
+          <ul id="pizzaInfo"></ul>
+        </div>
+      </div>
 <!-- Select Size Radio Button -->
       <h5>Select a size:</h5>
       <div class="form-check">
@@ -61,9 +70,5 @@
       </div>
       <button type="submit" class="btn-danger" id="addToCart">Add to Cart</button>
     </form>
-    <div class="pizzaOrder">
-      <h3>Your Order</h3>
-      <p>Your <span class="pizzaSize"></span> Pizza : $<span class="pizzaPrice"></span> </p>
-    </div>
   </body>
 </html>

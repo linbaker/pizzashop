@@ -66,6 +66,7 @@ function displayPizzaDetails(pizzasDisplay) {
 
 $(function() {
   $(".pizzaForm").submit(function(event) {
+    $(".pizzaOrder").show();
     event.preventDefault();
     var size = $("input:radio[name=size]:checked").val();
     var cheese = $("input:radio[name=cheese]:checked").val();
