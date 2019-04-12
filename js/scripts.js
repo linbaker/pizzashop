@@ -14,10 +14,13 @@ function Pizza() {
 }
 
 
-// //User Interface Logic
-// $(function() {
-//   $(".pizzaForm").submit(function(event) {
-//     event.preventDefault();
-//     var size = $()
-//   });
-// });
+//User Interface Logic
+$(function() {
+  $(".pizzaForm").submit(function(event) {
+    event.preventDefault();
+    var size = $("input:radio[name=size]:checked").val();
+    var cheese = $("input:radio[name=cheese]:checked").val();
+    var toppings = $("input:checkbox[name=toppings]:checked").val();
+    console.log(size, cheese, toppings);
+  });
+});
