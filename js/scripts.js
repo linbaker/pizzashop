@@ -21,6 +21,18 @@ Order.prototype.assignId = function() {
   return this.currentId;
 }
 
+//Find pizza
+Order.prototype.findPizza = function(id) {
+  for (var i=0; i< this.pizzas.length; i++) {
+    if (this.pizzas[i]) {
+      if (this.pizzas[i].id == id) {
+        return this.pizzas[i];
+      }
+    }
+  };
+  return false;
+}
+
 //Push pizza object to order array
 Order.prototype.addPizza = function(pizza) {
   pizza.id = this.assignId();
@@ -49,7 +61,6 @@ Pizza.prototype.sumPrice = function() {
 };
 
 
-
 //User Interface Logic
 var order = new Order();
 var pizza;
@@ -63,6 +74,20 @@ function displayPizzaDetails(pizzasDisplay) {
   pizzaOrderList.html(htmlPizzas);
 };
 
+function showPizza(pizzaId) {
+  var pizza = order.findPizza(pizzaId);
+  $("#showPizzaDetails").show();
+  $(".pizzaSize").html(pizza.size);
+  $(".pizzaCheese").html(pizza.cheese);
+  $(".pizzaToppings").html(pizza.toppings);
+  var buttons = $("#buttons");
+}
+
+function attachListeners(pizza) {
+  $("ul#pizzaInfo").on("click", "li", function() {
+    showPizza(this.id);
+  });
+};
 
 $(function() {
   $(".pizzaForm").submit(function(event) {
@@ -76,8 +101,6 @@ $(function() {
       });
     var newPizza = new Pizza(size, cheese, toppings);
     order.addPizza(newPizza);
-    // $(".pizzaSize").html(pizza.size);
-    // $(".pizzaPrice").html(pizza.price);
     displayPizzaDetails(order);
   });
 });

@@ -1,5 +1,14 @@
+#showPizzaDetails {
+    display: none;
+}
+
+.jumbotron {
+  background: orange;
+}
+
 .pizzaOrder {
+  background: radial-gradient(circle, red, yellow);
   float: right;
-  background: blue;
   display: none;
+  padding: 10px;
 }
