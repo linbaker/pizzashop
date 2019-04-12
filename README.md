@@ -21,12 +21,12 @@ _This application will allow a user to customize a pizza from available options 
 |-|-|-|
 |User selects pizza size and size choice is displayed below at submit |"large"|"large"|
 |User selects cheese and toppings which is displayed at submit|"extra cheese, pepperoni, tomatoes"|"large pizza with extra cheese, pepperoni and tomatoes"|
-|No pizza options are selected|""|"Please select a pizza to begin your order"|
-
+|Price is added based on inputs by user|"large pizza with extra cheese, pepperoni and tomatoes"|"14"|
+|At submit show pizza size and price|"large pizza with extra cheese, pepperoni and tomatoes"|"Large 2 Topping Pizza: $14"|
 
 ## Known Bugs
 
-__
+_Click function for pizza details is not currently functioning.
 
 ## Support and contact details
 
